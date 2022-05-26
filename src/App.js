@@ -1,14 +1,25 @@
 import logo from './croppedprofile.png';
 import './App.css';
-
-function App() {
+import { Canvas } from '@react-three/fiber';
+import React from "react";
+import { Suspense } from 'react';
+import Header from './Header.js';
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-     </header>
+        <Header/>
+        <img src={logo} alt="null"/>
+      <Canvas>
+      <Suspense fallback={null}>
+        <mesh>
+          <boxBufferGeometry />
+          <meshPhongMaterial />
+        </mesh>
+        <ambientLight args={[0xff0000]} intensity={0.1} />
+        <directionalLight position={[0, 0, 5]} intensity={0.5} />
+      </Suspense>
+      </Canvas>
     </div>
   );
 }
 
-export default App;

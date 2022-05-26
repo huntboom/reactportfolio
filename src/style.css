@@ -6,7 +6,15 @@ canvas {
   left: 0;
 }
 
-
+.header {
+    display:flex;
+    background-color:#45A29E;
+    height:5em;
+    justify-content:space-between;
+    position:fixed;
+    width:100%;
+    z-index:2;
+}
 :root {
   --dark-bg: rgba(15, 15, 15, 0.95);
   --spacing: 350px;

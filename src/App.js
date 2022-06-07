@@ -3,11 +3,10 @@ import './App.css';
 import { Canvas } from '@react-three/fiber';
 import React from "react";
 import { Suspense } from 'react';
-import Header from './Header.js';
+import * as THREE from "three";
 export default function App() {
   return (
     <div className="App">
-        <Header/>
         <img src={logo} alt="null"/>
       <Canvas>
       <Suspense fallback={null}>
